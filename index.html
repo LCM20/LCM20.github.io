@@ -46,7 +46,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<title>My TiddlyWiki — a non-linear personal web notebook</title>
+<title>My TiddlyWiki — 一个非线性的网页式笔记</title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~--><!--~~ Raw markup ~~-->
 
 
@@ -139,11 +139,17 @@ Error message and password prompt
 
 <li>$:/core</li>
 
+<li>$:/DefaultTiddlers</li>
+
 <li>$:/isEncrypted</li>
+
+<li>$:/language</li>
 
 <li>$:/languages/zh-Hans</li>
 
 <li>$:/plugins/tiddlywiki/katex</li>
+
+<li>$:/SiteTitle</li>
 
 <li>$:/state/plugin-info--1187089954-$:/plugins/tiddlywiki/katex---112608699</li>
 
@@ -345,7 +351,11 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
-<li>New Tiddler</li>
+<li>数学公式编辑</li>
+
+<li>英语</li>
+
+<li>ReadMe</li>
 
 </ul>
 </p>
@@ -9230,8 +9240,15 @@ Error message and password prompt
     }
 }</pre>
 </div>
+<div created="20190130015328765" modified="20190130015521577" title="$:/DefaultTiddlers">
+<pre>ReadMe
+GettingStarted</pre>
+</div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
+</div>
+<div created="20190129233609578" modified="20190129233609578" title="$:/language">
+<pre>$:/languages/zh-Hans</pre>
 </div>
 <div author="BramChen" core-version="&gt;=5.0.8" dependents="" description="Chinese (Simplified)" name="zh-Hans" plugin-type="language" title="$:/languages/zh-Hans" type="application/json" version="5.1.19">
 <pre>{
@@ -12965,6 +12982,9 @@ Error message and password prompt
     }
 }</pre>
 </div>
+<div created="20190130015153750" modified="20190130015259029" title="$:/SiteTitle">
+<pre>My ~TiddlyWiki</pre>
+</div>
 <div created="20190129134731837" modified="20190129134734140" title="$:/state/plugin-info--1187089954-$:/plugins/tiddlywiki/katex---112608699">
 <pre>usage</pre>
 </div>
@@ -12977,10 +12997,10 @@ Error message and password prompt
 <div created="20190129133905472" modified="20190129133917105" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Plugins</pre>
 </div>
-<div created="20190129135035834" modified="20190129135035834" title="$:/state/tab/sidebar--595412856">
+<div created="20190129135035834" modified="20190130015319609" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
-<div created="20190129134726785" list="[[New Tiddler]]" modified="20190129141559644" title="$:/StoryList">
+<div list="GettingStarted ReadMe" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20190129133938184" modified="20190129133938184" title="$:/temp/HidePluginWarning">
@@ -12999,7 +13019,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///C:/Users/Administrator/Desktop/TiddlyWiki%20(1)%20(1).html&quot;
+            &quot;text&quot;: &quot;file:///C:/Users/Administrator/Desktop/index.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -13019,7 +13039,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/C:/Users/Administrator/Desktop/TiddlyWiki%20(1)%20(1).html&quot;
+            &quot;text&quot;: &quot;/C:/Users/Administrator/Desktop/index.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -13827,11 +13847,18 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
     }
 }</pre>
 </div>
-<div created="20190129134751182" modified="20190129142134741" tags="" title="New Tiddler">
-<pre>$$f_{p}(t)=\sum_{k=-\infty}^{\infty}F_{k}e^{jk\omega_{0}t}$$
+<div created="20190129134751182" modified="20190130015042378" tags="" title="数学公式编辑">
+<pre>在线公式编辑器，可以直接复制过来，需要用“$$...$$”括起来。
 
+https://www.codecogs.com/latex/eqneditor.php?lang=zh-cn</pre>
+</div>
+<div created="20190130004739287" modified="20190130004958339" tags="" title="英语">
+<pre>他们表示正在做某事的时候，是直接说what are you ...? or Are you doing ...? 那个are you 是连在一起的，甚至都不用特地去想直接就可以说出来。
 
-</pre>
+这个句式就直接表示正在做某事。</pre>
+</div>
+<div created="20190130015349104" modified="20190130015441636" tags="" title="ReadMe">
+<pre>点击右侧的对号按钮可以将这个记事本下载下来。</pre>
 </div>
 
 </div>
