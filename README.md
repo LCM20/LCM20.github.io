@@ -1,4 +1,4 @@
-# LCM20.github.io
+# lalalafly.github.io
 
 github pages 搭建博客教程，这个是比较容易的。  
 而且这个教程本身是写在他的工程的wiki里面的，一开始没注意的时候，感觉这个方法也不错。
