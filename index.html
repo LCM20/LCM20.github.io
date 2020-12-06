@@ -143,6 +143,8 @@ Error message and password prompt
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home</li>
 
+<li>$:/config/RelinkOnRename</li>
+
 <li>$:/core</li>
 
 <li>$:/DefaultTiddlers</li>
@@ -367,17 +369,9 @@ Error message and password prompt
 
 <li>博客圈</li>
 
-<li>插入图片，插入链接</li>
-
-<li>到底什么叫非线性的网页笔记？</li>
-
-<li>交流电抗器和直流电抗器的区别？</li>
-
-<li>数学公式编辑</li>
-
 <li>温伯格：给科学工作者的四条黄金建议</li>
 
-<li>Latex and Overleaf</li>
+<li>Latex 笔记</li>
 
 </ul>
 </p>
@@ -397,6 +391,9 @@ Error message and password prompt
 </div>
 <div created="20190717060141581" modified="20190717060141581" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home">
 <pre>show</pre>
+</div>
+<div created="20201114084857656" modified="20201114084857656" title="$:/config/RelinkOnRename">
+<pre>yes</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.19">
 <pre>{
@@ -13018,7 +13015,7 @@ Error message and password prompt
 <div created="20190129134731837" modified="20190129134734140" title="$:/state/plugin-info--1187089954-$:/plugins/tiddlywiki/katex---112608699">
 <pre>usage</pre>
 </div>
-<div created="20190717055757612" modified="20201108234403262" title="$:/state/showeditpreview">
+<div created="20190717055757612" modified="20201114071700334" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
 <div created="20201106071706670" modified="20201106071716903" title="$:/state/tab--1963855381">
@@ -13039,7 +13036,7 @@ Error message and password prompt
 <div created="20190129135035834" modified="20201106071754269" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
-<div created="20201108234216304" list="插入图片，插入链接 博客圈 温伯格：给科学工作者的四条黄金建议 GettingStarted" modified="20201108234248698" title="$:/StoryList">
+<div created="20201206022445222" list="温伯格：给科学工作者的四条黄金建议 博客圈 [[Latex 笔记]] GettingStarted" modified="20201206022453768" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20190129133938184" modified="20190129133938184" title="$:/temp/HidePluginWarning">
@@ -13058,7 +13055,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///C:/My_Files/Jian_Guo_Yun/index.html&quot;
+            &quot;text&quot;: &quot;file:///C:/Users/LALALA/Desktop/index%20%E8%AE%B0%E5%BE%97%E4%B8%A2%E6%8E%89%20(1).html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -13078,7 +13075,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/C:/My_Files/Jian_Guo_Yun/index.html&quot;
+            &quot;text&quot;: &quot;/C:/Users/LALALA/Desktop/index%20%E8%AE%B0%E5%BE%97%E4%B8%A2%E6%8E%89%20(1).html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -13090,11 +13087,11 @@ Error message and password prompt
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1920&quot;
+            &quot;text&quot;: &quot;1536&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;1080&quot;
+            &quot;text&quot;: &quot;864&quot;
         }
     }
 }</pre>
@@ -13889,64 +13886,109 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20201106071730073" modified="20201106071730073" title="$:/themes/tiddlywiki/vanilla/options/sidebarlayout">
 <pre>fluid-fixed</pre>
 </div>
-<div created="20201108143304909" modified="20201108234411933" tags="" title="博客圈">
+<div created="20201108143304909" modified="20201114090546270" tags="" title="博客圈">
 <pre>[[Joyfulphysics|https://www.joyfulphysics.net/]]</pre>
-</div>
-<div created="20190717055726097" modified="20201031092614804" tags="" title="插入图片，插入链接">
-<pre>[img[https://wx1.sinaimg.cn/orj360/006wRXD4gy1g4vzxlbge9j30j60sr111.jpg]]
-
-[[source|https://m.weibo.cn/detail/4393265598390715]]
-
-可以使用sm.ms图床，这个图传是V友建的，算是比较靠谱，至少可以找到人。
-
-[[SM.MS|https://sm.ms/]]
-
-而且支持从剪贴板直接粘贴图片。
-
-站长在这  @ [[Showfom|https://www.v2ex.com/member/Showfom]]</pre>
-</div>
-<div created="20201019111126447" modified="20201019111151168" tags="" title="到底什么叫非线性的网页笔记？">
-<pre>这个非线性指的不是一次函数和二次函数的那个线性。指的是笔记的记录顺序。 比如word那种记录，如果用作记事本的话，你只能从上到下依次记录，然后看的时候就是一页一页的浏览，这种就叫做线性笔记。事实上好多笔记都是线性笔记，比如说很多手机里的备忘录，那种一条一条的记录也算是线性笔记，就是你需要从上到下依次浏览。
-
-非线性笔记就是，简单的说你可以在某一条笔记里面加上其他的笔记的链接，然后你在浏览这一条笔记的时候可以直接跳转到其他的相关笔记中去。这种记录方式有点像网络状的记录方式，如果做出一个笔记的相关图，那么这个图就是网络状的，线性笔记就是线状的。
-
-最近新出现的一个非线性笔记就是Roam Research，是2020年初新火起来的的一个概念，里面的原理就是双向链接。当你在记录一个笔记的时候，你可以在里面的一些段落加上关键词，然后点击这个关键词就可以跳转到这个关键词对应的笔记，而且这个笔记里面会自动列出来你的其他的笔记中含有这个关键词的那些段落。
-
-如果说是这么一个简单的功能的话，其实这个和tag也没有什么区别，我定义一个tag也可以做到，点击tag可以列出来所有的含有这个tag的笔记。
-
-Tiddlywiki是支持双向链接的，需要添加Stroll插件。</pre>
-</div>
-<div created="20201010113115226" modified="20201019111037147" tags="" title="交流电抗器和直流电抗器的区别？">
-<pre>逆变器是把直流变成交流的期间，那么用在直流侧为了使直流电压更加平稳的电抗器就是直流电抗器，用在交流侧为了滤掉交流电压中的高次谐波的电抗器就叫交流电抗器。</pre>
-</div>
-<div created="20190129134751182" modified="20190717092222128" tags="" title="数学公式编辑">
-<pre>在线公式编辑器，可以直接复制过来，需要用“$$$...$$$”括起来。
-
-https://www.codecogs.com/latex/eqneditor.php?lang=zh-cn
-
-https://www.bilibili.com/read/mobile/1374392
-</pre>
 </div>
 <div created="20201108142230951" modified="20201108142247998" tags="" title="温伯格：给科学工作者的四条黄金建议">
 <pre>http://www.joyfulphysics.net/index.php/archives/356/</pre>
 </div>
-<div created="20201031035202838" modified="20201031092134997" tags="" title="Latex and Overleaf">
-<pre>记得那个Bug的查找过程
+<div created="20201114065358610" modified="20201205104811105" tags="" title="Latex 笔记">
+<pre>以下皆在Overleaf中编译。
 
-\begin{equation} %这里加*表示不对公式编号
- %注意这里得in还有un没改过来呢！！！！！！！！！！！！！！！！
- a
- \end{equation}
+首先，Latex中的默认页面大小和页边距都是不符合平时所用的格式的，需要进行如下设置。
 
-[img[https://i.loli.net/2020/10/31/JE4AehXuwPGORUl.png]]
+```
+\documentclass[a4paper]{article} 
 
-这里是Overleaf官方演示如何正确在Latex里面插入公式。重点在于，以竖排方式插入公式，括号写成C语言中的函数的形式。
+\usepackage[margin=1in]{geometry} % 页边距1inch = 2.54cm，这就是Word默认页边距2.54cm的来源。
+```
+---
+如果你有一个公式，这个公式太长以至于一行放不下，那么就需要分行，这个时候，如果你使用了默认的\left \{ 这种括号的话，Latex会报错反复提醒你你缺少一个\right \}，即使你并没有缺少这个右括号。
 
-( 
+这是因为你在括号里面使用了换行。这个问题网上也有一些解决办法就是在使用了\left \{ 之后还没换行的时候再使用一个\right. 来欺骗Latex让它以为你有了一个右括号。
 
-                        这里是你的括号里的内容。
+但是这个方法也是有问题的，因为Latex中括号的大小是根据括号里面有多少括号自动调整的。如果你在没有换行的时候就使用了\right. 这个时候会导致Latex没办法准确判断你的括号里一共有几个小括号，然后就会使得，你的长长的公式前后使用了小小的括号。
 
-)</pre>
+如果你不注意的话，还会使得左右两个括号的大小不一致，这是经常出现的。
+
+解决办法就是使用[[链接|https://liam.page/2018/11/09/the-bigger-than-bigger-delimiter-in-LaTeX/]]中的方法。括号不用成对使用，可以随意调整大小，非常方便。
+
+当然如果是花括号加公式的话，还是优先选择
+
+
+```
+\left \{  
+
+\begin{Matrix}  
+
+\end {Matrix} 
+
+\right .
+```
+
+
+比较方便。
+
+---
+
+Latex插入图片问题。这个问题在我上次作业提交之前将我队友逼得焦头烂额。因为无论你怎么调整，Latex都似乎有自己的想法，它喜欢把图片另起一页放在中间，让人很是无奈。后来我才发现了这个方法，就是强制让图片放在你想放的位置。而且这个方法也解决了原来的问题——如果文章结束有一张图需要重启一页的话，那么Latex会把这张图放在最后一页最中心的位置，而不是置顶显示。
+
+```
+\usepackage{float}
+\begin{figure}[H] % 这里的H必须是大写！
+	\begin{minipage}[t]{0.5\linewidth}	
+		\centering
+		\includegraphics[width=1.0\textwidth]{time8}	
+		\caption{ \label{}}  
+	\end{minipage}
+	\begin{minipage}[t]{0.5\linewidth}
+		\centering
+		\includegraphics[width=1.0\textwidth]{iter8}
+		\caption{\label{}}
+	\end{minipage}
+\end{figure}
+```
+说到图片问题，还有子图分页问题。当你的几张子图再一页放不下，另起一页又太浪费的时候，你就会想到如何把这个子图拆分一下，使其中几页放在上一页，剩下几页放在下一页。就像这样：
+[img[https://i.loli.net/2020/11/14/rR19CKzGchoOdIy.png]]
+
+其实直接按照这个上下两部分分别使用\begin{figure}[H]\end{figure}即可。这个时候注意上面的\begin{figure}[H]\end{figure}里面不要写图片标题（不是标题空出来，是直接\caption注释掉），如此这般Latex会自动延续子图里面的小标号a,b,c,d,e,f图。
+
+当然了，如前所言，既然用了[H]，就要引用宏包float。
+
+```
+\usepackage{float}
+```
+
+当然了，这样会出现另一个问题，就是如果你在设置完了子图分页之后，你发现前面有一些东西需要补充，你补充了前文之后那么这里就不再需要子图分页了，于是这两部分子图就会又重新挤到一页中。这个时候，由于他们属于两张图片，那么自然他们之间的距离会比不分成两部分的时候略大一些。就像这样：
+
+[img[https://i.loli.net/2020/11/14/3SyA6zTuqxQBfJD.png]]
+
+这个时候，可以直接再上一个\begin{figure}[H]\end{figure}最后面的时候加入一个\vspace{-0.8}，就像这样：
+
+```
+......
+    %\vspace{-0.8cm}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+......
+```
+
+在Latex里面，\vspace就是专门用来调整竖直间距的，相比于原有的间距，\vspace{}的参数为正则是增加，为负则是减小。其甚至可以用于调整标题距离页面顶部的距离。
+
+```
+\title{ \vspace{-1cm}我是标题我是标题} % 用来调整标题距离页面顶部的距离。
+
+\title{ 我是标题我是标题\vspace{-1cm}} % 用来调整标题下面的间距。
+```
+
+---
+
+Latex在处理引用的时候，会在引用的标号前面空出一格，就像下图一样。你需要自己手动在\ref{}的后面空出一格才能与之匹配，不然会显得这个字符左右间距不对称。而手动空出一格也没有破坏整页的美感，因为在Latex本身就是在英文字母左右自动空出一格的。
+
+[img[https://i.loli.net/2020/11/14/uQONJAZmtP6jVeo.png]]</pre>
 </div>
 
 </div>
