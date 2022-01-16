@@ -373,6 +373,8 @@ Error message and password prompt
 
 <li>到底什么叫非线性的网页笔记？</li>
 
+<li>简单的“计算机辅助验算”</li>
+
 <li>如何使用Python调用Matlab函数</li>
 
 <li>如何在Simulink中模拟太阳能电池板？</li>
@@ -13054,7 +13056,7 @@ Error message and password prompt
 <div created="20190129135035834" modified="20201106071754269" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
-<div created="20220106073951500" list="如何使用Python调用Matlab函数 PDF测试 GettingStarted" modified="20220106073951500" title="$:/StoryList">
+<div list="简单的“计算机辅助验算” GettingStarted" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20190129133938184" modified="20190129133938184" title="$:/temp/HidePluginWarning">
@@ -13073,7 +13075,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///C:/Users/LCM20/Seafile/My_Files/Jian_Guo_Yun/index.html&quot;
+            &quot;text&quot;: &quot;file:///C:/Users/LCM20/Seafile/My_Files/Jian_Guo_Yun/index%E6%AD%A3%E5%9C%A8%E5%86%99%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%BE%85%E5%8A%A9%E8%AF%81%E6%98%8E.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -13093,7 +13095,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/C:/Users/LCM20/Seafile/My_Files/Jian_Guo_Yun/index.html&quot;
+            &quot;text&quot;: &quot;/C:/Users/LCM20/Seafile/My_Files/Jian_Guo_Yun/index%E6%AD%A3%E5%9C%A8%E5%86%99%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%BE%85%E5%8A%A9%E8%AF%81%E6%98%8E.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -13941,6 +13943,37 @@ https://web.archive.org/web/20201118143934/https://zhuanlan.zhihu.com/p/32634593
 不过这个功能Tag也可以简单的替代。
 
 Tiddlywiki是支持双向链接的，需要添加Stroll插件。</pre>
+</div>
+<div created="20220116060236417" modified="20220116062849462" tags="" title="简单的“计算机辅助验算”">
+<pre>是经过了这个帖子的启发：https://www.v2ex.com/t/828411
+这个帖子里面好像介绍了一个计算机辅助证明的工具，如同里面的留言说的，其说明文档写的不是很清楚。不过使用计算机来对推导过程进行验算还是比较一个比较有意思的思路。
+所以此处自己DIY一个还算是能用的，使用现有的工具验证公式推导过程的流程。记录如下。
+
+首先想到的就是使用Mathematica进行验算，在公式的推导过程中，大多数使用的是变量进行推导。如果只是想要计算结果的话，使用Matlab其实会更加熟练。但是Matlab在一个公式对一个变量进行求导这件事情上做的并不如Mathematica内行。
+
+然而Mathematica也有一些缺点。其实以前不是没有想过，直接抛弃草稿纸，使用MMA进行公式的推导。这样在每一步的化简几乎不需要时间。但是问题在于其机器化简的结果实在是不那么人性化。比如 
+[img[https://s2.loli.net/2022/01/16/WwG9VY4xuzNM8d5.png]]
+
+输出的结果里面不能自动欧拉展开，而且“Re[]”函数无法指定其中的变量的取值范围。
+
+这个时候如果非要展开里面的内容只好使用“模式”，就是下划线表示的变量。
+[img[https://s2.loli.net/2022/01/16/lbZsSmM9iyWOVJL.png]]
+你会发现，由于公式里面有一个$$e^{-i Phib}$$ ，其竟然不能自动变形成为$$e^{i (-Phib)}$$然后套用模式。
+于是就需要再套用一个模式才能对此指数项套用欧拉公式。
+[img[https://s2.loli.net/2022/01/16/1iEOegNmY7ZRPvK.png]]
+这个时候里面就没有指数项了，全都是复数乘法。但是这个时候对其取实部操作还是无法进行，还需要对里面的部分进行展开。
+不过这个可能是为了给用户更多的自由度？
+以下是完成这个取实部的所有操作
+[img[https://s2.loli.net/2022/01/16/LDj5oliaMfOYxgk.png]]
+[img[https://s2.loli.net/2022/01/16/BjKpycmGaWixdAf.png]]
+注意，直接像第89步一样指定83步的变量取值范围是无效的
+[img[https://s2.loli.net/2022/01/16/jROKbNmzUxvXsk6.png]]
+
+经过上面的折腾，想要直接使用MMA推导公式，过程还是十分繁琐的。然而如果不考虑输出结果的人性化，从能计算出来结果的角度看，MMA还是非常强大的。
+因此，这里给出的验证计算结果的正确性的方法就是，按照手动推导的过程使用MMA进行计算，结算结果是多少无所谓。机器计算结果减去手动计算结果，然后直接在定义域里面带入数据进行计算，最后得到的结果如果为零则说明计算正确。
+如下所示，简单快捷。结合了MMA的符号计算的强大之处，回避了输出结果的繁琐之处。
+[img[https://s2.loli.net/2022/01/16/l6d9RUibVSNGnmu.png]]
+</pre>
 </div>
 <div created="20220106072737828" modified="20220106073635971" tags="" title="如何使用Python调用Matlab函数">
 <pre>Python调用Matlab函数，或者使用Matlab调用Python函数。这两种操作在这里都可以方便的得到解决。
